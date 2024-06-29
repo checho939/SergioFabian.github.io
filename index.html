@@ -1,37 +1,309 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-wwidth, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Porfolio Web</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!--menus-->
+    <div class="contenedor-header">
         <header>
-            <h1>Sergio Fabian Sosa Zotelo</h1>
-            <h2>Diseñador gráfico</h2>
-        </header>
-        <main>
-            <section>
-                <h2>Acerca de mí</h2>
-                <b>
-                    Soy Sergio Sosa, un apasionado diseñador gráfico que se está adentrando
-                    en el mundo de la programación. Con habilidades creativas y una mente
-                    analítica, busco combinar mi experiencia en diseño con el poder de la
-                    tecnología para crear soluciones innovadoras y visualmente impactantes.
-                    Con una sólida base en diseño gráfico y una creciente habilidad en programación,
-                    estoy listo para enfrentar nuevos desafíos y seguir aprendiendo en este emocionante 
-                    campo interdisciplinario.
-                </b>
-            </section>
-            <section>
-                <h2>Habilidades</h2>
+            <div class="logo">
+                <a href="#">Checho</a>
+            </div>
+            <nav id="nav">
                 <ul>
-                    <li>HTML
-                    <li>CSS</li>
-                    <li>Java Script</li>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
                 </ul>
-            </section>
-        </main>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+     <!--inicio-->
+     <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/perfil.png" alt="">
+            </div>
+            <h1>SERGIO SOSA</h1>
+            <h2>Diseñador Gráfico / Programador Junior</h2>
+            <div class="redes">
+                <a href="https://wa.me/595995388840"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/checho_designer?igsh=MXkxa2p1aDdzbnNveg=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sergio-sosa-b705b426a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.behance.net/chechodesigner"><i class="fa-brands fa-behance"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, Sergio Sosa,</span> me caracterizo por ser una persona
+                responsable, honesta, centrada y con
+                liderazgo, me apasiona trabajar en
+                equipo y cumplir con los retos
+                impuestos. Tengo gran motivación por
+                seguir perfeccionando habilidades y
+                crecer profesionalmente. Confío en
+                mi capacidad de aplicar mis
+                conocimientos en el área de trabajo
+                que se me designe, teniendo un buen
+                desempeño en la actividad necesaria.
+                Soy bombero voluntario en el Cuartel
+                de Bomberos Voluntarios de Natalio
+                "CBVN".
+                </p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            03-06-2005
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +595 995 388 840
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            itzchecho939.contact@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            B° Ka'aguy Rory, Encarnación, Paraguay
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+<!--intereses-->
+<div class="col">
+    <h3>Intereses</h3>
+    <div class="contenedor-intereses">
+        <div class="interes">
+            <i class="fa-solid fa-gamepad"></i>
+            <span>JUEGOS</span>
+        </div>
+        <div class="interes">
+            <i class="fa-solid fa-headphones"></i>
+            <span>MUSICA</span>
+        </div>
+        <div class="interes">
+            <i class="fa-solid fa-plane"></i>
+            <span>VIAJAR</span>
+        </div>
+        <div class="interes">
+            <i class="fa-brands fa-windows"></i>
+            <span>Windows</span>
+        </div>
+        <div class="interes">
+            <i class="fa-solid fa-person-hiking"></i>
+            <span>DEPORTE</span>
+        </div>
+        <div class="interes">
+            <i class="fa-solid fa-camera"></i>
+            <span>FOTOS</span>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+ <!--Habilidades-->
+ <section class="skills" id="skills">
+    <div class="contenido-seccion">
+        <h2>Habilidades</h2>
+        <div class="fila">
+            <!-- Technical Skill -->
+            <div class="col">
+                <h3>Habilidades tecnicas</h3>
+                <div class="skill">
+                    <span>Photoshop</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>95%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Illustrator</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>95%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Premiere Pro</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Lightroom</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Marketing Digital</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Habilidades Personales</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Liderazgo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCION CURRICULUM -->
+ <section id="curriculum" class="curriculum">
+    <div class="contenido-seccion">
+        <h2>Curriculum</h2>
+        <div class="fila">
+            <div class="col izquierda">
+                <h3>Educación</h3>
+                <div class="item izq">
+                    <h4>Diplomado en Marketing Digital</h4>
+                    <span class="casa">Universidad Nacional de Itapuá</span>
+                    <span class="fecha">2023</span>
+                    <div class="conectori">
+                        <div class="circuloi"></div>
+                    </div>
+                </div>
+
+                <div class="item izq">
+                    <h4>Introducción Al Diseño</h4>
+                    <span class="casa">Platzi</span>
+                    <span class="fecha">2023</span>
+                    <div class="conectori">
+                        <div class="circuloi"></div>
+                    </div>
+
+                </div>
+                <div class="item izq">
+                    <h4>Diseño de identidad corporativa</h4>
+                    <span class="casa">Platzi</span>
+                    <span class="fecha">2023</span>
+                    <div class="conectori">
+                        <div class="circuloi"></div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col derecha">
+                <h3>Experiencia de trabajo</h3>
+                <div class="item der">
+                    <h4>INCUNI & CAE
+                    </h4>
+                    <span class="casa">Incubadora de empresas.
+                    </span>
+                    <span class="fecha">2024</span>
+                    <p>Dentro de la incubadora de empresas me desempeño dentro de los cargos; Administrador de pautas publicitarias, Diseñador Grafico y Encargado de Marketing Digital.</p>
+                    <div class="conectord">
+                        <div class="circulod"></div>
+                    </div>
+                </div>
+                <div class="item der">
+                    <h4>Academia de Emprendedurismo</h4>
+                    <span class="casa">Local de Enseñanza.</span>
+                    <span class="fecha">2024</span>
+                    <p>En la Academia de Emprendedurismo aplico mis habilidades en; Administración de pautas publicitarias, Diseñador gráfico, Marketing Digital y Atención al cliente.</p>
+                    <div class="conectord">
+                        <div class="circulod"></div>
+                    </div>
+                </div>
+                <div class="item der">
+                    <h4>Arandur</h4>
+                    <span class="casa">Local de Enseñanza.</span>
+                    <span class="fecha">2023</span>
+                    <p>Dentro de Arandu me desempeñe como Diseñador gráfico, Administrador de pautas publicitarias, Encargado de Marketing Digital.</p>
+                    <div class="conectord">
+                        <div class="circulod"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <script src="script.js"></script>
+
     </body>
     <footer>
-
     </footer>
 </html>
